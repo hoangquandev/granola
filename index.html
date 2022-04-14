@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Granola Việt Nam</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./grid.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header class="header">
+    <!-- logo -->
+    <div class="header-logo">
+        
+          <h1>Granola Việt Nam</h1>      
+          <p>NGŨ CỐC DINH DƯỠNG</p>
+
+      </div>
+      
+    <!-- navigation -->
+    <nav class="top-nav"> 
+        <ul class="nav-links">
+            <li><a href="#" style="color: #07785f; font-style: italic;">Trang Chủ</a></li>
+            <li><a href="#">Sản Phẩm</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a class="img" href="#">
+                <img src="./Icon/Icon-12.png" alt="">
+            </a></li>
+        </ul> 
+    </nav>
+</header>
+
+<main class="content">
+    <div class="grid wide">  
+        <div class="row">
+
+        
+            <!--content item  -->
+                <div class="intro col l-4 c-12 m-12">
+                    <ul class="list-unstyled">
+                        <li class="mix">Tự Mix Các Thành Phần</li>
+                        <li class="your">Của Riêng Bạn</li>
+                        <li>Đến với chúng tối bạn có thể:
+                            <ul class="list-unstyled">
+                                <li>• Tự chọn các loại thành phần mong muốn.</li>
+                                <li>• Lựa chọn số kcal trong sản phẩm.</li>
+                                <li>• Refill và bảo vệ môi trường.</li>
+                                <li>• Hỗ trợ người nông dân phát triển các loại nông sản mới.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="row" style="margin-top: 30px">
+
+                        <div class="col l-4">
+                            <img src="./Icon/Icon-12.png" alt="" height="70px" style="margin-top: -25px;">
+                        </div>
+                            <div class="wrapper col l-4" style="margin-left: -65px;">
+                                <span class="minus">-</span>
+                                <span class="num">10</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <div class="col l-4" style="text-align: center; margin-top: -10px;">
+                                <p style="font-size: 16px;">1.000.000</p>
+                                <p style="font-size: 8px;">VNĐ</p>
+                            </div>
+                        
+                    </div>
+                   
+                    <button class="btn-add">Đặt Hàng</button>
+                </div>
+                <!--content item  -->
+            <div class="midle col l-4 c-12 m-12" style="margin-top: 60px;"> 
+                <canvas id="myChart"></canvas>
+                <div class="ima">
+                    <img src="./Image/san pham.png" alt="">
+                </div>
+                <button class="btn-total" >
+                    Tổng Số Kcal: 5000
+                </button>
+            </div>
+            <!--content item  -->
+            <div class="col l-4 c-12 m-12 form-part"> 
+                <div class="row"style="margin-top: 70px;" >
+                    <div class="col l-6 m-12 c-12 form-scale">
+                        <div class="row">
+                            <img class="col l-6" src="./Icon/Icon-13.png" height="50px" alt="">
+                        <div class="col l-6">
+                            <p>500</p>
+                            <p style="color: #999;">gram</p>
+                        </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-field col l-6 m-12 c-12 bg1">
+                       <input type="number" onchange="updateChart()" class="form-input" id="nho"  placeholder="Nhập Số %" min="0" max="100">
+                       <label for="nho" class="form-labels">Nho ấn</label>
+                    </div>
+
+                    <div class="form-field col l-6 m-12 c-12 bg2">
+                        <input type="number" onchange="updateChart()" class="form-input" id="dua" value="10" placeholder=" " min="0" max="100">
+                        <label for="nho" class="form-label">Dừa Sấy Khô</label>
+                    </div>
+
+                   <div class="form-field col l-6 m-12 c-12 bg3">
+                    <input type="number" onchange="updateChart()" class="form-input" id="hanh" value="7" placeholder=" " min="0" max="100">
+                    <label for="nho" class="form-label">Hạnh Nhân</label>
+                    </div>
+
+                    <div class="form-field col l-6 m-12 c-12 bg4">
+                    <input type="number" onchange="updateChart()" class="form-input" id="yen" value="4" placeholder=" " min="0" max="100">
+                    <label for="nho" class="form-label">Yến Mạch</label>
+                    </div>
+
+                    <div class="form-field col l-6 m-12 c-12 bg5">
+                    <input type="number" onchange="updateChart()" class="form-input" id="dieu" value="14" placeholder=" " min="0" max="100">
+                    <label for="nho" class="form-label">Hạt Điều</label>
+                    </div>
+
+                    <div class="form-field col l-6 m-12 c-12 bg6">
+                    <input type="number" onchange="updateChart()" class="form-input" id="xoai" value="10" placeholder=" " min="0" max="100">
+                    <label for="nho" class="form-label">Xoài Sấy Khô</label>
+                    </div>
+
+                    <div class="form-field col l-6 m-12 c-12 bg7">
+                    <input type="number" onchange="updateChart()" class="form-input" id="oc" value="5" placeholder=" " min="0" max="100">
+                    <label for="nho" class="form-label">Hạt Óc Chó</label>
+                    </div>
+
+                    <div class="form-field col l-6 m-12 c-12 bg8">
+                    <input type="number" onchange="updateChart()" class="form-input" id="bi" value="15" placeholder=" " min="0" max="100">
+                    <label for="nho" class="form-label">Hạt Bí</label>
+                    </div>
+
+                    <div class="form-field col l-6 m-12 c-12 bg9">
+                    <input type="number" onchange="updateChart()" class="form-input" id="macca" value="30" placeholder=" " min="0" max="100">
+                    <label for="nho" class="form-label">Macca</label>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+        
+</main>
+
+
+<footer class="row grid wide" style="margin-top: 30px;">
+    <div class="contact col l-3">
+        <h4>Liên Hệ Với Granola Việt Nam</h4>
+        <div class="row">            
+            <div class="nav-contact col l-4">
+                <a href="#">Facebook</a>
+            </div>
+            <div class="nav-contact col l-4">
+                <a href="#">Shopee</a>
+            </div>
+            <div class="nav-contact col l-4">
+                <a href="#">Zalo</a>
+            </div>    
+        </div>    
+    </div>
+    <div class="sub-nav col l-6">
+        <div class="row">            
+            <div class="nav-contact col l-4">
+                <a href="#">Giới Thiệu</a>
+            </div>
+            <div class="nav-contact col l-4">
+                <a href="#">Chính sách đổi trả</a>
+            </div>
+            <div class="nav-contact col l-4">
+                <a href="#">Điều khoản dịch vụ</a>
+            </div>    
+        </div>    
+    </div>
+    <div class="address col l-3">
+        <h4>Địa chỉ doanh nghiệp</h4>
+        <p style="font-size: 12px;">123 Tô Hiến Thành, Phường 5, Quận 10, Tp.HCM</p>
+    </div>
+</footer>
+
+<script>
+    const plus = document.querySelector (".plus"),
+        minus =  document.querySelector(".minus"),
+        num = document.querySelector(".num");
+    
+    let a = 10;
+    
+    plus.addEventListener("click", ()=>{
+    a++;
+    a = (a < 10) ? "0" + a : a;
+    num.innerText = a;
+    console.log(a);
+});
+
+    minus.addEventListener("click", ()=>{
+    if(a > 1){
+        a--;
+        a = (a < 10) ? "0" + a : a;
+    num.innerText = a;
+  }
+});
+ </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js" integrity="sha512-R/QOHLpV1Ggq22vfDAWYOaMd5RopHrJNMxi8/lJu8Oihwi4Ho4BRFeiMiCefn9rasajKjnx9/fTQ/xkWnkDACg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    var mot = document.getElementById('nho');
+    var hai = document.getElementById('dua');
+    var ba = document.getElementById('hanh');
+    var bon = document.getElementById('yen');
+    var mot = document.getElementById('dieu');
+    var mot = document.getElementById('xoai');
+    var mot = document.getElementById('oc');
+    var mot = document.getElementById('bi');
+    var mot = document.getElementById('macca');
+    
+
+    const labels = [
+      
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: ['#504e97', '#00add5', '#f0b05a','#41814b','#d65338','#eec718','#97c6c1','#e2a3a1','#d1d6d2'],
+        borderColor: ['#504e97', '#00add5', '#f0b05a','#41814b','#d65338','#eec718','#97c6c1','#e2a3a1','#d1d6d2'],
+        data: [nho.value, dua.value, hanh.value, yen.value, dieu.value, xoai.value, oc.value, bi.value ,macca.value]
+      }]
+    };
+  
+    const config = {
+      type: 'doughnut',
+      data: data,
+      options: {
+          cutout: '80%',
+          
+        datalabels: {
+            align: 'center',
+            formatter: (value, context) => {
+                const datapoints = context.chart.data.datasets[0].data;
+                function totalSum(total, datapoint) {
+                    return total + datapoint;
+                const totalvalue = datapoints.reduce(totalSum, 0);
+                const percentageValue = (value / totalvalue * 100).toFixed(1);
+                const display = [`${value}`, `${percentageValue}%`,]
+                    return display;
+                    }
+                }
+            },
+          plugins: {
+              tooltip: {
+                  enabled: false
+              }
+          }
+      },
+      
+      plugins: [ChartDataLabels]
+    };
+
+    function updateChart(){
+        var updateValues = [nho.value, dua.value, hanh.value, yen.value, dieu.value, xoai.value, oc.value, bi.value ,macca.value];
+        myChart.data.datasets[0].data = updateValues;
+        myChart.update();
+    };
+  </script>
+  <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+  </script>
+</body>
+</html>
